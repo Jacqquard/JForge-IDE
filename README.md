@@ -74,7 +74,7 @@ Ready to forge some Java code? Here's how to get JForge up and running.
     *   If a pre-compiled JAR is available (e.g., `JForge-v0.1A.jar`), download it.
     *   Alternatively, clone this repository:
         ```bash
-        git clone https://your-repository-link-here/JForge.git
+        git clone https://github.com/Jacqquard/JForge-v.0.1A.git
         cd JForge-v.0.1A
         ```
 2.  **Compile (if running from source):**
