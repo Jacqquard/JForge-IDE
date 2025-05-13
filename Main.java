@@ -7,7 +7,7 @@ import javax.swing.event.DocumentListener;
 import javax.swing.undo.UndoManager;
 import java.awt.*;
 import java.awt.event.*;
-import java.awt.geom.Rectangle2D; // For modelToView2D
+import java.awt.geom.Rectangle2D;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -71,13 +71,13 @@ public class Main extends JFrame {
 
     private void applyDarkUIManagerSettings() {
         UIManager.put("Panel.background", DARK_BG_PRIMARY);
-        UIManager.put("Viewport.background", DARK_EDITOR_BG); // Viewport should match editor/console
+        UIManager.put("Viewport.background", DARK_EDITOR_BG);
         UIManager.put("Frame.background", DARK_BG_PRIMARY);
         UIManager.put("Window.background", DARK_BG_PRIMARY);
 
         UIManager.put("control", DARK_BG_SECONDARY);
         UIManager.put("text", DARK_TEXT_FG);
-        UIManager.put("info", DARK_TEXT_FG); // Used for tooltips and often for scrollbar arrow color in Metal
+        UIManager.put("info", DARK_TEXT_FG);
 
         UIManager.put("Button.background", new Color(70, 73, 75));
         UIManager.put("Button.foreground", DARK_TEXT_FG);
@@ -85,7 +85,6 @@ public class Main extends JFrame {
         UIManager.put("Button.focus", new Color(DARK_SELECTION_BG.getRed(), DARK_SELECTION_BG.getGreen(), DARK_SELECTION_BG.getBlue(), 50));
         UIManager.put("Button.border", BorderFactory.createLineBorder(new Color(80,80,80)));
 
-        // Text Components
         UIManager.put("TextPane.background", DARK_EDITOR_BG);
         UIManager.put("TextPane.foreground", DARK_TEXT_FG);
         UIManager.put("TextPane.caretForeground", DARK_CARET_FG);
@@ -104,8 +103,7 @@ public class Main extends JFrame {
         UIManager.put("TextField.selectionBackground", DARK_SELECTION_BG);
         UIManager.put("TextField.selectedTextColor", DARK_SELECTION_FG);
         UIManager.put("TextField.border", BorderFactory.createLineBorder(DARK_LINE_NUMBER_BORDER));
-
-        // MenuBar & Menus
+        
         UIManager.put("MenuBar.background", DARK_BG_PRIMARY);
         UIManager.put("MenuBar.foreground", DARK_TEXT_FG);
         UIManager.put("MenuBar.border", BorderFactory.createLineBorder(DARK_LINE_NUMBER_BORDER));
@@ -125,47 +123,41 @@ public class Main extends JFrame {
         UIManager.put("PopupMenu.background", DARK_BG_PRIMARY);
         UIManager.put("PopupMenu.border", BorderFactory.createLineBorder(DARK_LINE_NUMBER_BORDER));
 
-        // --- ScrollBar ---
-        Color scrollBarTrackColor = DARK_BG_SECONDARY; // e.g., new Color(50, 50, 50)
-        Color scrollBarThumbColor = new Color(100, 100, 100); // Medium gray
-        Color scrollBarThumbShadow = new Color(70, 70, 70); // Darker edge for 3D effect
-        Color scrollBarThumbHighlight = new Color(130, 130, 130); // Lighter edge for 3D effect
+        Color scrollBarTrackColor = DARK_BG_SECONDARY;
+        Color scrollBarThumbColor = new Color(100, 100, 100);
+        Color scrollBarThumbShadow = new Color(70, 70, 70);
+        Color scrollBarThumbHighlight = new Color(130, 130, 130);
 
-        UIManager.put("ScrollBar.background", scrollBarTrackColor); // Background of the entire scrollbar component (incl. button areas)
-        UIManager.put("ScrollBar.foreground", DARK_TEXT_FG);      // Often for arrow color, if not overridden
-        UIManager.put("ScrollBar.track", scrollBarTrackColor);      // The channel
-        UIManager.put("ScrollBar.thumb", scrollBarThumbColor);      // The draggable part
+        UIManager.put("ScrollBar.background", scrollBarTrackColor);
+        UIManager.put("ScrollBar.foreground", DARK_TEXT_FG);
+        UIManager.put("ScrollBar.track", scrollBarTrackColor);
+        UIManager.put("ScrollBar.thumb", scrollBarThumbColor); 
         
-        // For Metal L&F's 3D effect on the thumb
         UIManager.put("ScrollBar.thumbShadow", scrollBarThumbShadow);
-        UIManager.put("ScrollBar.thumbDarkShadow", scrollBarThumbShadow.darker()); // Darkest edge
+        UIManager.put("ScrollBar.thumbDarkShadow", scrollBarThumbShadow.darker());
         UIManager.put("ScrollBar.thumbHighlight", scrollBarThumbHighlight);
         
-        // Track highlight usually not distinct in dark themes or same as track
         UIManager.put("ScrollBar.trackHighlight", scrollBarTrackColor); 
         
         UIManager.put("ScrollBar.width", 15);
-        UIManager.put("ScrollBar.border", BorderFactory.createEmptyBorder()); // No border for the JScrollBar component itself
+        UIManager.put("ScrollBar.border", BorderFactory.createEmptyBorder());
 
 
-        // --- SplitPane ---
         UIManager.put("SplitPane.background", DARK_BG_PRIMARY);
         UIManager.put("SplitPane.dividerSize", 7);
         UIManager.put("SplitPaneDivider.background", DARK_BG_SECONDARY);
         UIManager.put("SplitPane.border", BorderFactory.createEmptyBorder());
 
-        // --- Dialogs & Lists ---
         UIManager.put("OptionPane.background", DARK_BG_PRIMARY);
         UIManager.put("OptionPane.messageForeground", DARK_TEXT_FG);
-        UIManager.put("FileChooser.background", DARK_BG_PRIMARY); // May need more specific styling for FileChooser
+        UIManager.put("FileChooser.background", DARK_BG_PRIMARY);
         UIManager.put("List.background", DARK_EDITOR_BG);
         UIManager.put("List.foreground", DARK_TEXT_FG);
         UIManager.put("List.selectionBackground", DARK_SELECTION_BG);
         UIManager.put("List.selectionForeground", DARK_SELECTION_FG);
         UIManager.put("Label.foreground", DARK_TEXT_FG);
 
-        // Explicitly for JScrollPane viewport if needed, though it should inherit from viewed component
-        UIManager.put("ScrollPane.background", DARK_BG_PRIMARY); // Background for JScrollPane itself if viewport is smaller
+        UIManager.put("ScrollPane.background", DARK_BG_PRIMARY);
         UIManager.put("ScrollPane.border", BorderFactory.createEmptyBorder());
     }
 
@@ -190,8 +182,7 @@ public class Main extends JFrame {
 
         JScrollPane editorScrollPane = new JScrollPane(editorPane);
         editorScrollPane.setBorder(BorderFactory.createEmptyBorder());
-        // Viewport should take editorPane's background. If not, uncomment:
-        // editorScrollPane.getViewport().setBackground(DARK_EDITOR_BG);
+
         TextLineNumber tln = new TextLineNumber(editorPane, this);
         editorScrollPane.setRowHeaderView(tln);
 
@@ -207,8 +198,6 @@ public class Main extends JFrame {
 
         JScrollPane consoleScrollPane = new JScrollPane(consoleArea);
         consoleScrollPane.setBorder(BorderFactory.createMatteBorder(1,0,0,0, DARK_LINE_NUMBER_BORDER));
-        // Viewport should take consoleArea's background. If not, uncomment:
-        // consoleScrollPane.getViewport().setBackground(DARK_CONSOLE_BG);
 
         JSplitPane splitPane = new JSplitPane(JSplitPane.VERTICAL_SPLIT, editorScrollPane, consoleScrollPane);
         splitPane.setContinuousLayout(true);
@@ -217,7 +206,7 @@ public class Main extends JFrame {
             @Override
             public BasicSplitPaneDivider createDefaultDivider() {
                 BasicSplitPaneDivider divider = new BasicSplitPaneDivider(this);
-                divider.setBackground(DARK_BG_SECONDARY); // Should match UIManager for SplitPaneDivider.background
+                divider.setBackground(DARK_BG_SECONDARY);
                 divider.setBorder(BorderFactory.createEmptyBorder());
                 return divider;
             }
@@ -226,8 +215,6 @@ public class Main extends JFrame {
         add(splitPane, BorderLayout.CENTER);
     }
 
-    // ... (Остальной код Main класса: setupMenu, setupWindowListener, file operations, compileAndRun, highlighting) ...
-    // ... (Этот код не изменялся и остается таким же, как в предыдущем ответе) ...
     private void setupMenu() {
         JMenuBar menuBar = new JMenuBar();
         JMenu fileMenu = new JMenu("File");
