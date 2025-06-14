@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="img/bannerJF.jpg" alt="JForge Banner" width="800"/>
+<img src="img/bannerJF.png" alt="JForge Banner" width="800"/>
 
 # JForge - IDE written in Java for Java <img src="img/jflogo.png" alt="" width="25"/>
 
