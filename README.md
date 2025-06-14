@@ -1,164 +1,159 @@
-<p align="center">
-  <img src="img/bannerJF.jpg" alt="JForge Banner" width="700"/>
-</p>
+<div align="center">
 
-<p align="center">
-  <img src="https://img.shields.io/badge/version-v.0.1A_Alpha-red" alt="Version">
-  <img src="https://img.shields.io/badge/language-Java_Swing-orange.svg" alt="Language">
-  <img src="https://img.shields.io/badge/platform-Desktop-lightgrey.svg" alt="Platform">
-  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
-  <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome">
-  <img src="https://img.shields.io/badge/status-in_development-blue" alt="Status">
-</p>
+<img src="img/bannerJF.jpg" alt="JForge Banner" width="800"/>
 
-<p align="center">
-  <strong><a href="https://jforge-site.vercel.app/">Project Website</a></strong>
-</p>
+# JForge - IDE written in Java for Java <img src="img/jflogo.png" alt="" width="25"/>
 
-<p>
-⭐ Drop a star on my GitHub repo – it fuels my coding passion!
-</p>
+**Version: v.0.1A**
 
----
+[![Version](https://img.shields.io/badge/version-v.1.0-blue.svg)](https://github.com/YourUsername/JForge)
+[![Java](https://img.shields.io/badge/Java-8%2B-orange?logo=java&logoColor=white)](https://www.java.com/)
+[![Swing](https://img.shields.io/badge/GUI-Java_Swing-red?logo=openjdk&logoColor=white)](https://docs.oracle.com/javase/8/docs/api/javax/swing/package-summary.html)
+[![Build](https://img.shields.io/badge/Build-JDK_Compiler-blueviolet)](https://docs.oracle.com/en/java/javase/17/docs/api/java.compiler/javax/tools/JavaCompiler.html)
+[![License](https://img.shields.io/badge/license-MIT-black.svg)](LICENSE)
 
-## ⚙️ Features
+**JForge** is a lightweight, cross-platform Integrated Development Environment (IDE) for Java, built entirely with Java Swing. It provides a clean, modern dark interface for comfortably writing, compiling, and running Java code, making it an excellent tool for learning and small projects.
 
-JForge v.0.1A comes packed with essential features to get you coding right away:
+**[🌐 Visit Project Website](https://jforge-site.vercel.app/)**
 
-*   🎨 **Sleek Dark Theme:** A beautifully crafted dark user interface for comfortable coding, day or night. All standard Swing components are themed!
-*   ✏️ **Java Syntax Highlighting:** Basic but effective highlighting for Java keywords, comments (single & multi-line), and strings.
-*   🔄 **Undo/Redo:** Don't fear mistakes! Standard undo (Ctrl+Z) and redo (Ctrl+Y) are supported.
-*   🔢 **Line Numbers:** Essential for any code editor, helping you navigate your code efficiently.
-*   📂 **File Operations:**
-    *   **New:** Start fresh with a new Java file.
-    *   **Open:** Load existing `.java` files.
-    *   **Save:** Save your work (Ctrl+S).
-    *   **Save As:** Save your file with a new name or location (automatically suggests `.java` extension).
-    *   **Unsaved Changes Prompts:** Never lose your work accidentally!
-*   ⚙️ **Compile & Run Java Code:**
-    *   Directly compile and run your Java code from within the IDE (F5).
-    *   Requires a JDK to be installed and accessible.
-    *   Supports compiling the currently open `.java` file or a temporary `TempClass.java` (if no file is open/saved, your public class must be named `TempClass`).
-*   🖥️ **Integrated Console Output:** View compilation messages, errors, and your program's `System.out` directly within JForge.
-*   ⌨️ **Keyboard Shortcuts:** Common actions like New (Ctrl+N), Open (Ctrl+O), Save (Ctrl+S), Undo (Ctrl+Z), Redo (Ctrl+Y), and Compile & Run (F5) have familiar shortcuts.
-*   📏 **Customizable Split Pane:** Adjust the space between the editor and the console.
-*   🚀 **Lightweight & Fast:** Built with pure Java Swing, ensuring a responsive experience.
+</div>
 
 ---
 
 ## 📸 Screenshots
 
+<div align="center">
+<table>
+  <tr>
+    <td><img src="img/s0.png" alt="JForge Main Interface" width="400"/></td>
+    <td><img src="img/s1.png" alt="JForge Dialog" width="400"/></td>
+  </tr>
+  <tr>
+    <td align="center"><em>Main interface with syntax highlighting</em></td>
+    <td align="center"><em>The first "Hello, world!" in JForge's history</em></td>
+  </tr>
+</table>
+</div>
 
+---
 
-<p align="center">
-  <img src="img/screen1.png" alt="JForge Main Interface" width="700"/>
-  <br><em>JForge Main Interface: Editor, Console, and Menu.</em>
-</p>
+## ✨ Key Features
 
-<p align="center">
-  <img src="img/screen2.png" alt="JForge Dialog Example" width="450"/>
-  <br><em>Example of executable code with an additional window.</em>
-</p>
+-   **Built-in Compilation and Execution**: Compile and run your Java code with a single keystroke (F5), with results and errors displayed in an integrated console.
+-   **Syntax Highlighting**: Automatic highlighting of Java keywords, strings, and comments to improve code readability.
+-   **Modern Dark Theme**: A meticulously configured dark interface for all UI components, reducing eye strain.
+-   **File Management**: A full suite of operations: create, open, save, and "save as...".
+-   **Data Loss Protection**: The IDE automatically prompts to save unsaved changes before closing a file or exiting.
+-   **Useful Editor Features**:
+    -   Line numbering.
+    -   Undo/Redo functionality.
+    -   Automatic UI adjustment to window size.
+-   **Standalone**: Requires no external dependencies other than an installed JDK.
+-   **Cross-platform**: Works wherever Java is installed (Windows, macOS, Linux).
+
+---
+
+## 🛠️ Tech Stack
+
+| Category         | Technology                                                                                                             | Description                                                                 |
+| :--------------- | :--------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------- |
+| **Language/Platform** | <img src="https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white" />                         | The main programming language and runtime environment.                      |
+| **GUI**          | <img src="https://img.shields.io/badge/Java_Swing-596D7C?style=flat" />                                                  | A library for creating a graphical user interface.                          |
+| **Compilation**  | <img src="https://img.shields.io/badge/JDK_Compiler_API-5382A1?style=flat" />                                            | The JDK's built-in API for programmatically compiling Java code.            |
+| **UI Rendering** | <img src="https://img.shields.io/badge/AWT-FF6B00?style=flat" />                                                         | Abstract Window Toolkit, used by Swing for low-level rendering and events.  |
 
 ---
 
 ## 🚀 Getting Started
 
-Ready to forge some Java code? Here's how to get JForge up and running.
-
 ### Prerequisites
 
-*   **Java Development Kit (JDK):** Version 8 or higher. JForge uses the system's Java compiler (`ToolProvider.getSystemJavaCompiler()`), so a full JDK (not just a JRE) is required.
-    *   You can download it from [Oracle JDK](https://www.oracle.com/java/technologies/javase-downloads.html) or [OpenJDK](https://openjdk.java.net/install/).
-    *   Ensure your `JAVA_HOME` environment variable is set and the JDK's `bin` directory is in your system's `PATH`.
+-   [Java Development Kit (JDK)](https://www.oracle.com/java/technologies/downloads/) version 8 or newer. **Important:** A JDK is required, not just a JRE, as JForge uses the compiler.
+-   Ensure that `javac` and `java` are available from your command line.
 
-### Running JForge
+### Compilation and Execution
 
-1.  **Download / Clone:**
-    *   If a pre-compiled JAR is available (e.g., `JForge-v0.1A.jar`), download it.
-    *   Alternatively, clone this repository:
-        ```bash
-        git clone https://github.com/Jacqquard/JForge-v.0.1A.git
-        cd JForge-v.0.1A
-        ```
-2.  **Compile (if running from source):**
-    Navigate to the directory containing `Main.java` and compile it:
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/YourUsername/JForge.git
+    cd JForge
+    ```
+
+2.  **Compile the source code:**
+    Open a terminal in the project folder and run the command:
     ```bash
     javac Main.java
     ```
-3.  **Run:**
-    *   **From JAR:**
-        ```bash
-        java -jar Main.jar
-        ```
-    *   **From compiled class files (if compiled from source):**
-        ```bash
-        java Main
-        ```
 
-And you're all set to start coding!
+3.  **Run the application:**
+    After successful compilation, run the command:
+    ```bash
+    java Main
+    ```
 
 ---
 
-## 🛠️ How to Use
+## 📁 Project Structure
 
-JForge aims for simplicity:
+The project is intentionally contained within a single file for simplicity and clarity.
 
-1.  **Writing Code:**
-    *   Use **File > New** or `Ctrl+N` to start a new file.
-    *   Use **File > Open** or `Ctrl+O` to open an existing `.java` file.
-    *   The editor provides basic syntax highlighting for Java.
-2.  **Saving Code:**
-    *   Use **File > Save** or `Ctrl+S` to save your current work.
-    *   Use **File > Save As...** to save with a new name. JForge will automatically append `.java` if not provided.
-3.  **Compiling and Running:**
-    *   Click **Build > Compile and Run** or press `F5`.
-    *   **If a `.java` file is open and saved:** JForge will save any unsaved changes (after prompting), compile this file, and then run it. The public class name must match the filename.
-    *   **If no file is open or it's an unsaved "New File":** JForge will attempt to save the content to a temporary `TempClass.java`, compile it, and run it.
-        > ⚠️ **Important:** In this "temporary file" mode, your public class in the editor **MUST** be named `TempClass` for compilation and execution to succeed.
-    *   Compilation errors, warnings, and program output will appear in the console area at the bottom.
+```
+JForge/
+│
+└── Main.java     # All code: logic, UI, and helper classes
+```
 
 ---
 
-## 💻 Tech Stack
+## 🔬 Detailed Code Breakdown
 
-JForge is built purely with:
+All code is located in the `Main.java` file, which contains two classes: `Main` and `TextLineNumber`.
 
-*   **Java:** The core programming language.
-*   **Java Swing:** For the graphical user interface.
-*   **Standard Java Libraries:** No external dependencies for the core application!
+### `Main` Class (The Heart of the Application)
+
+-   **Constants and UI Setup (`applyDarkUIManagerSettings`)**: At the beginning of the class, color constants for the dark theme are defined. The `applyDarkUIManagerSettings` method uses `UIManager.put()` to globally apply these colors to all Swing components, creating a unified and cohesive look.
+-   **`initComponents()`**: This method is responsible for creating and laying out the main interface elements:
+    -   `JTextPane` (`editorPane`): The main field for code input and editing.
+    -   `JTextArea` (`consoleArea`): A non-editable area for displaying compilation results and program output.
+    -   `JSplitPane`: Divides the editor and the console, allowing the user to resize them.
+    -   `TextLineNumber`: Adds a line number panel to the left of the editor.
+-   **`setupMenu()`**: Creates the top menu ("File", "Edit", "Build") and binds the corresponding actions (`newFile`, `openFile`, `compileAndRun`, etc.) to its items using `ActionListeners`. Hotkeys (Ctrl+N, F5) are also configured here.
+-   **File Operations (`newFile`, `openFile`, `saveFile`, `saveFileAs`)**: Implement the file handling logic. The `confirmClose()` method checks for unsaved changes and asks the user for confirmation, preventing accidental data loss.
+-   **`compileAndRun()` (Key Method)**: Implements the IDE's main functionality.
+    1.  It checks if the current code is saved. If not, it prompts to save.
+    2.  If the file has not been saved to disk, the code is written to a temporary file named `TempClass.java`.
+    3.  It gets the system Java compiler via `ToolProvider.getSystemJavaCompiler()`.
+    4.  It starts the compilation, redirecting the error stream to a `ByteArrayOutputStream` for later output to the console.
+    5.  If compilation is successful, it creates a new process using `ProcessBuilder` to run the compiled `.class` file (`java TempClass`).
+    6.  The output and error streams of this process are captured and displayed in real-time in the `consoleArea`.
+-   **`applyHighlighting()`**: The method responsible for syntax highlighting. It uses regular expressions (`Pattern` and `Matcher`) to find keywords, comments, and strings in the editor's text and applies the corresponding styles (`StyledDocument`) to them.
+
+### `TextLineNumber` Class (Line Numbering)
+
+-   This helper class is a `JComponent` that draws line numbers next to the `JTextPane` text area.
+-   It "listens" for changes in the document (`DocumentListener`) and the component (`ComponentListener`, `PropertyChangeListener`) to automatically repaint when text is added/removed, or the window or font size changes.
+-   **`paintComponent()`**: The main drawing method. It calculates which lines are currently visible and draws their numbers, synchronizing their position with the text in the editor.
+-   **`updatePreferredWidth()`**: Dynamically calculates the required width for the line number panel based on the total number of lines in the document (e.g., 1000 lines require more space than 99).
 
 ---
 
-## 🚧 Known Issues & Limitations (v.0.1A - Alpha)
+## 💡 How It Works: Architecture
 
-As an early alpha release, JForge has some limitations:
+JForge is a classic desktop application built on the event-driven model of Java Swing.
 
-*   **Basic Syntax Highlighting:** Does not cover all Java syntax nuances or provide semantic analysis.
-*   **No Project Management:** Works on a single-file basis. No support for multi-file projects or build systems like Maven/Gradle.
-*   **Limited Error Reporting:** Compiler errors are displayed as raw output; no direct linking to code lines yet.
-*   **No Debugger:** Debugging features are not yet implemented.
-*   **`TempClass` Restriction:** When compiling unsaved or new files, the main public class must be named `TempClass`.
-*   **Single File Compilation:** Only compiles the currently active file.
-*   **Performance:** While generally lightweight, performance with extremely large files hasn't been extensively tested.
-*   **Theming:** While most common components are themed, some niche Swing components or platform-specific behaviors might not perfectly match the dark theme.
+1.  **Launch**: The `main` method creates an instance of `Main` (which is a `JFrame`) and makes it visible within the Swing Event Dispatch Thread (EDT).
+2.  **Event Loop**: The application enters an event-waiting loop. All user interactions (keystrokes, mouse clicks, window resizing) generate events.
+3.  **Event Handlers**: Special listener objects, attached to UI components, intercept these events. For example, clicking the "Save" menu item generates an `ActionEvent` that calls the `saveFile()` method. Typing in the editor generates a `DocumentEvent`, triggering `applyHighlighting()` and the repainting of the line numbers.
+4.  **Compilation and Execution**:
+    -   Pressing F5 calls `compileAndRun()`.
+    -   This method runs on the main EDT, but to execute the compiled program, it launches a **separate system process** (`java MyClass`).
+    -   To prevent the UI from "freezing" while waiting for the running program to finish, its output is read in a separate background thread (`new Thread(...)`).
+    -   Data from this background thread is passed back to the EDT using `SwingUtilities.invokeLater` to safely update the `consoleArea`.
+
+This architecture allows for a responsive interface that does not block during long-running operations like compiling and running user code.
 
 ---
 
-## 🛣️ Future Ideas / Roadmap
+## 📜 License
 
-While JForge is simple by design, here are some potential enhancements for the future:
-
-*   [ ] Enhanced Syntax Highlighting (more tokens, error highlighting)
-*   [ ] Basic Code Completion
-*   [ ] Find & Replace functionality
-*   [ ] Customizable Fonts & Editor Settings
-*   [ ] Tabbed interface for multiple files
-*   [ ] Simple project structure support
-*   [ ] Integration with a basic debugger
-*   [ ] More theme options (e.g., light theme, user-customizable themes)
-*   [ ] Improved error parsing and navigation from console to code
-
-## 📝 License
-
-Distributed under the MIT License. See `LICENSE` file for more information. (You'll need to add a LICENSE file to your repo, typically with the MIT license text).
+This project is distributed under the MIT License. See the `LICENSE` file for details.
