@@ -75,7 +75,7 @@
 
 1.  **Clone the repository:**
     ```bash
-    https://github.com/Jacqquard/JForge-IDE.git
+    git clone https://github.com/Jacqquard/JForge-IDE.git
     cd JForge
     ```
 
