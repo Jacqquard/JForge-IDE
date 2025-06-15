@@ -6,7 +6,7 @@
 
 **Version: v.0.1A**
 
-[![Version](https://img.shields.io/badge/version-v.1.0-blue.svg)](https://github.com/YourUsername/JForge)
+[![Version](https://img.shields.io/badge/version-v.0.1A-blue.svg)](https://github.com/YourUsername/JForge)
 [![Java](https://img.shields.io/badge/Java-8%2B-orange?logo=java&logoColor=white)](https://www.java.com/)
 [![Swing](https://img.shields.io/badge/GUI-Java_Swing-red?logo=openjdk&logoColor=white)](https://docs.oracle.com/javase/8/docs/api/javax/swing/package-summary.html)
 [![Build](https://img.shields.io/badge/Build-JDK_Compiler-blueviolet)](https://docs.oracle.com/en/java/javase/17/docs/api/java.compiler/javax/tools/JavaCompiler.html)
